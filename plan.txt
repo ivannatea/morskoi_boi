@@ -1,0 +1,5 @@
+1.задать 6 дивам класс exlode и 6 дивам класс treasure
+2.найти дивы через document.querySelectorAllи сохранить в переменные (explode_elem,treasure_elem,simple_elem)
+3.нажатие на элементы в массиве
+4.по нажатию на див сделать фон  backgroundImage
+5.очки

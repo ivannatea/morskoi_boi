@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.bg{
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="container ">
+		<h1 class="task">Найди 6 кладов</h1>
+		<h1>Score: <span class="score innerHTML">0</span></h1>
+		<!--ряд с буквами-->
+		<div class="row">
+			<div class="col-1 px-5 py-3  bg-warning text-center border"></div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>1</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>2</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>3</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>4</h4>
+			</div>
+			<div class="col-1 px-5  py-3 bg-warning text-center border">
+				<h4>5</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>6</h4>
+			</div>
+		</div>
+		<!--первый ряд-->
+		<div class="row">
+			<div class="col-1 px-5 py-4 bg-warning text-center border">
+				<h4>A</h4>
+			</div>
+			<div class="col-1 explode  px-5 py-4 bg border "></div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+			<div class="col-1 treasure px-5 py-4 bg border "></div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+		</div>
+		<!--второй ряд-->
+		<div class="row">
+			<div class="col-1  px-5 py-4 bg-warning text-center border">
+				<h4>B</h4>
+			</div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+			<div class="col-1 treasure px-5 py-4 bg border "></div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+			<div class="col-1 explode  px-5 py-4 bg border "></div>
+			<div class="col-1 simple px-5 py-4  bg border"></div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+		</div>
+		<!--третий ряд-->
+		<div class="row">
+			<div class="col-1 px-5 py-4  bg-warning text-center border">
+				<h4>C</h4>
+			</div>
+			<div class="col-1 treasure px-5 py-4 bg border "></div>
+			<div class="col-1 simple px-5 py-4  bg border "></div>
+			<div class="col-1 simple px-5 py-4  bg border "></div>
+			<div class="col-1 simple px-5 py-4  bg border "></div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+			<div class="col-1 explode  px-5 py-4  bg border "></div>		
+		</div>
+		<!--четвертый ряд-->
+		<div class="row">
+			<div class="col-1 px-5 py-4  bg-warning text-center border">
+				<h4>D</h4>
+			</div>
+			<div class="col-1 simple px-5 py-4 bg border"></div>
+			<div class="col-1 explode  px-5 py-4 bg border"></div>
+			<div class="col-1  simple px-5 py-4 bg border"></div>
+			<div class="col-1 simple px-5 py-4 bg border"></div>
+			<div class="col-1 treasure  px-5 py-4 bg border"></div>
+			<div class="col-1 simple px-5 py-4 bg border"></div>
+		</div>
+		<!--пятый ряд-->
+		<div class="row">
+			<div class="col-1 px-5 py-4  bg-warning text-center border">
+				<h4>E</h4>
+			</div>
+			<div class="col-1 simple px-5 py-4  bg border "></div>
+			<div class="col-1 simple px-5 py-4  bg border "></div>
+			<div class="col-1  treasure px-5 py-4  bg border "></div>
+			<div class="col-1 simple px-5 py-4  bg border "></div>
+			<div class="col-1 explode  px-5 py-4  bg border "></div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+		</div>
+		<!--шестой ряд-->
+		<div class="row">
+			<div class="col-1 px-5 py-4 bg-warning text-center border">
+				<h4>F</h4>
+			</div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+			<div class="col-1 treasure px-5 py-4 bg border "></div>
+			<div class="col-1 explode px-5 py-4 bg border "></div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+			<div class="col-1 simple px-5 py-4 bg border "></div>
+		</div>
+	</div>
+<script type="text/javascript">
+	let explode_elem = document.querySelectorAll(".explode")
+	let treasure_elem = document.querySelectorAll(".treasure")
+	let simple_elem = document.querySelectorAll(".simple")
+	let score = 0;
+
+	for(let index = 0; index<6; index = index + 1){
+		explode_elem[index].onclick = function(){
+			explode_elem[index].style.backgroundImage = "url('bang.png')";
+			explode_elem[index].style.backgroundSize = "100% 100%";
+			score = score-1;
+			document.querySelector(".score").innerHTML = score ;
+		}
+	}
+	for(let indext = 0; indext<6; indext = indext + 1){
+		treasure_elem[indext].onclick = function(){
+			treasure_elem[indext].style.backgroundImage = "url('treasure.png')";
+			treasure_elem[indext].style.backgroundSize = "100% 100%";
+			score = score+1;
+			document.querySelector(".score").innerHTML = score ;
+		}
+	}
+	for(let indexs = 0; indexs<24; indexs = indexs + 1){
+		simple_elem[indexs].onclick = function(){
+			simple_elem[indexs].style.backgroundImage = "url('mem.jpg')";
+			simple_elem[indexs].style.backgroundSize = "100% 100%";
+		}
+	}
+</script>
+</body>
+</html>
